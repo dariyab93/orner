@@ -48,12 +48,3 @@ To run the unit tests:
 python -m unittest test_main.py
 ```
 
-## Contributing
-Contributions are welcome! If you'd like to contribute to the project, feel free to submit a pull request.
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-Feel free to customize this README according to your project's specific requirements and features.
