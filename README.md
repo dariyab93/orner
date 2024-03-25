@@ -1,8 +1,6 @@
-# Orner chatbot 
-
+# Telegram Bot for tracking orders or signing up for gift subscriptions through Orner 
 ---
 
-# Telegram Bot for tracking orders or signing up for gift subscriptions through Orner 
 ## Overview
 This project implements a Telegram bot that facilitates the subscription process for a gift box service. Users can interact with the bot to sign up for a gift box subscription, check the status of their orders, and more.
 
