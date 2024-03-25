@@ -2,6 +2,8 @@ import telebot
 from threading import Timer
 import re
 from config import BEARER_TOKEN
+from main import send_message
+
 
 # Initialize your Telegram bot
 bot = telebot.TeleBot(BEARER_TOKEN)
@@ -24,7 +26,7 @@ def send_reminder(chat_id):
 # Function to send a reminder after 2 hours
 def send_two_hour_reminder(chat_id):
     bot.send_message(chat_id, "Ви забули про підписку? 🥺 Зробіть усього декілька кліків і ми почнемо збирати для вас секретний бокс!")
-    # Schedule the final message after an additional time (e.g., 2 hours)
+    # Schedule the final message after an additional time
     Timer(7200, send_final_message, args=[chat_id]).start()
 
 # Function to send the final message
@@ -64,7 +66,7 @@ def process_address(message, first_name, last_name):
     # Save the address from the user's message
     address = message.text
     # Prompt the user for the first payment
-    bot.send_message(message.chat.id, "Вже майже все 🙃\n\nДля завершення оформлення підписки здійсніть, будь ласка, свою першу оплату\n\n+ кнопка оплатити (перекидає на лікпей)")
+    bot.send_message(message.chat.id, "Вже майже все 🙃 Для завершення оформлення підписки здійсніть, будь ласка, свою першу оплату")
     # Set the state to expect payment confirmation next
     bot.register_next_step_handler(message, process_payment_confirmation, first_name, last_name, address)
 
