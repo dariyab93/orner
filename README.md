@@ -35,14 +35,20 @@ This project implements a Telegram bot that facilitates the subscription process
 2. Interact with the bot by sending commands and messages in your Telegram chat.
 
 ## File Structure
-- `main.py`: Main script containing the bot implementation.
-- `config.py`: Configuration file for storing sensitive information such as API tokens.
-- `test_main.py`: Unit tests for testing the functionality of the bot.
-- `your_module.py`: Placeholder for any additional modules or functions used by the bot.
+- `main.py`: This script contains the main bot logic and setup.
+- `config.py`: Configuration file for storing sensitive information such as the BEARTOKEN.
+- `order_status.py`: This script contains the function to retrieve the order status.
+- `message_handler.py`: This script contains the logic for handling user messages.
+- `order_search.py`: This script contains the function to search for orders by phone number or tracking number.
+- `responses.py`: This script contains the function to generate responses based on the order status.
+- `utils.py`: This script contains utility functions such as build_reply_markup, which is used for building reply markup buttons.
+- `giftbox.py`: A script for handling the "Sign Up for a "Giftbox" option. Takes the user through a series of questions.
+- `test_search.py`: Runs some tests on the order_search function 
+ 
 
 ## Testing
 To run the unit tests:
 ```
-python -m unittest test_main.py
+python -m unittest test_search.py
 ```
 
